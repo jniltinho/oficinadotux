@@ -1,4 +1,8 @@
 # Oficinadotux -- FFMPEG + NVENC
+[Youtube Channel OficinadoTux](https://www.youtube.com/channel/UCfh_Dbh1LrqGVJQ1k2f6DgQ)
+
+ - FFMPEG 2.8.6
+ - NVIDIA SDK 6.0.1
 
 
 # Install bin FFMPEG Support NVENC -- Xbuntu 16.04 64Bits
