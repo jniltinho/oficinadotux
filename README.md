@@ -8,6 +8,7 @@
 # Install bin FFMPEG Support NVENC -- Xbuntu 16.04 64Bits
 
 ```bash
+sudo apt-get -y install git-core
 cd /tmp/
 git clone https://github.com/jniltinho/oficinadotux
 cd oficinadotux/ffmpeg_nvenc
