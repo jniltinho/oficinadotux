@@ -23,3 +23,6 @@ cp -aR /tmp/oficinadotux/ffmpeg_nvenc/usr/* /usr/
 rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
 
 ```
+
+# Para Compilar o FFMPEG 2.8.6 com suporte para NVENC
+[Install_FFMPEG_NVENC](https://gist.github.com/jniltinho/96bb45bec18a90d0d33448ee67c28cc7)
