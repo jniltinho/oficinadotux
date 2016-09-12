@@ -9,15 +9,17 @@
 
 ```bash
 ## Para Instalar o Binario, execute os passos abaixo:
+## EXECUTAR COMO ROOT !!!!!
 
-sudo apt-get -y install git-core
-sudo apt-get -y install ffmpeg
+sudo su
+apt-get -y install git-core ffmpeg
+
 cd /tmp/
 git clone https://github.com/jniltinho/oficinadotux
-cd oficinadotux/ffmpeg_nvenc
+cd /tmp/oficinadotux/ffmpeg_nvenc
 tar -vxf ffmpeg-2.8.6_nvenc_Ubuntu1604_64Bits.xz
-sudo -R root:root usr/*
-sudo cp -aR usr/* /usr/
-rm -rf /tmp/usr
+chown -R root:root /tmp/oficinadotux/ffmpeg_nvenc/usr/*
+cp -aR /tmp/oficinadotux/ffmpeg_nvenc/usr/* /usr/
+rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
 
 ```
