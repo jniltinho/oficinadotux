@@ -50,3 +50,9 @@ rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
 
 
 [Compile FFMPEG 2.8.6 + NVENC](https://gist.github.com/jniltinho/96bb45bec18a90d0d33448ee67c28cc7)
+
+
+# FFMPEG STATIC BIN
+[Site](https://www.johnvansickle.com/ffmpeg/)
+[Git Last Release 64Bits](https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-64bit-static.tar.xz)
+[Release 3.1.3 64Bits](https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz)
