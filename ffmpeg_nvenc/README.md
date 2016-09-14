@@ -53,6 +53,8 @@ rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
 
 
 # FFMPEG STATIC BIN
-[Site](https://www.johnvansickle.com/ffmpeg/)
-[Git Last Release 64Bits](https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-64bit-static.tar.xz)
-[Release 3.1.3 64Bits](https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz)
+
+ - [Site](https://www.johnvansickle.com/ffmpeg/)
+ - [Git Last Release 64Bits](https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-64bit-static.tar.xz)
+ - [Release 3.1.3 64Bits](https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz)
+
