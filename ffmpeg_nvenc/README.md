@@ -3,9 +3,12 @@
 
  - FFMPEG 2.8.6, 3.1.3
  - NVIDIA SDK 6.0.1
+ - Ubuntu, Kubuntu, Lubuntu, Linux Mint 16.04 64Bits
+ - Precisa ter uma placa NVIDIA e drivers atualizados
+ - Recomendo Instalar o FFMPEG 3.1.3
 
 
-# FFMPEG 2.8.6 + NVENC -- Xbuntu 16.04 64Bits
+# FFMPEG 2.8.6 + NVENC
 
 ```bash
 ## Para Instalar o Binario, execute os passos abaixo:
@@ -24,7 +27,7 @@ rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
 
 ```
 
-# FFMPEG 3.1.3 + NVENC -- Xbuntu 16.04 64Bits
+# FFMPEG 3.1.3 + NVENC
 
 ```bash
 ## Para Instalar o Binario, execute os passos abaixo:
@@ -44,5 +47,5 @@ rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
 ```
 
 
-# Para Compilar o FFMPEG 2.8.6 com suporte para NVENC siga o script abaixo
+# Compilar FFMPEG 2.8.6 suporte NVENC siga o script abaixo
 [Install_FFMPEG_NVENC](https://gist.github.com/jniltinho/96bb45bec18a90d0d33448ee67c28cc7)
