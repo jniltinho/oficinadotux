@@ -1,9 +1,9 @@
 # Oficinadotux -- FFMPEG + NVENC
 [Youtube Channel OficinadoTux](https://www.youtube.com/channel/UCfh_Dbh1LrqGVJQ1k2f6DgQ)
 
- - FFMPEG 2.8.6, 3.1.3
+ - FFMPEG 3.1.3, 2.8.6
  - NVIDIA SDK 6.0.1
- - Ubuntu, Kubuntu, Lubuntu, Linux Mint 16.04 64Bits
+ - Ubuntu, Kubuntu, Lubuntu 16.04 64Bits, Linux Mint 18 64Bits
  - Precisa ter uma placa NVIDIA e drivers atualizados
  - Recomendo Instalar o FFMPEG 3.1.3
 
