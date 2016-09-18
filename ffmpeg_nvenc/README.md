@@ -15,7 +15,7 @@
 ## EXECUTAR COMO ROOT !!!!!
 
 sudo su
-apt-get -y install git-core ffmpeg
+apt-get -y install git-core ffmpeg libfdk-aac0
 
 cd /tmp/
 git clone https://github.com/jniltinho/oficinadotux
@@ -36,7 +36,7 @@ rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
 ## EXECUTAR COMO ROOT !!!!!
 
 sudo su
-apt-get -y install git-core ffmpeg
+apt-get -y install git-core ffmpeg libfdk-aac0
 
 cd /tmp/
 git clone https://github.com/jniltinho/oficinadotux
