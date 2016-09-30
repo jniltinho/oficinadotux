@@ -125,5 +125,5 @@ rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
 
 # Compile OBS-STUDIO
 
-[OBS-STUDIO 0.16.2](https://github.com/jp9000/obs-studio/wiki/Install-Instructions#manually-compiling-on-debian-based-distros)
-[OBS Releases](https://github.com/jp9000/obs-studio/releases)
+ - [OBS-STUDIO 0.16.2](https://github.com/jp9000/obs-studio/wiki/Install-Instructions#manually-compiling-on-debian-based-distros)
+ - [OBS Releases](https://github.com/jp9000/obs-studio/releases)
