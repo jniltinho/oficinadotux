@@ -9,7 +9,7 @@
  - Recomendo Instalar o FFMPEG 3.1.3 com SDK 7.0.1
 
 
-# Bin FFMPEG 3.1.3 + NVENC 6.0.1
+# Bin FFMPEG 3.1.3 + NVENC SDK 6.0.1
 
 ```bash
 ## Para Instalar o Binario, execute os passos abaixo:
@@ -48,22 +48,25 @@ rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
 ```
 
 
-# OBS-STUDIO PORTABLE 0.16.2
+# OBS-STUDIO PORTABLE 0.16.2 + FFMPEG 3.1.3 NVENC SDK 7.0.1
 
 ```bash
 ## Para Instalar, execute os passos abaixo:
-## PS** Voce deve instalar primeiro o FFMPEG 3.1.3 com NVENC SDK 7.0.1
-## ffmpeg-3.1.3_nvenc_701_Ubuntu1604_64Bits.xz
 ## EXECUTAR COMO ROOT !!!!!
 
 sudo su
 add-apt-repository ppa:obsproject/obs-studio -y
 apt-get update 
-apt-get install -y obs-studio
+apt-get install -y git-core ffmpeg libfdk-aac0 obs-studio
 
 cd /tmp/
 git clone https://github.com/jniltinho/oficinadotux
 cd /tmp/oficinadotux/ffmpeg_nvenc
+tar -vxf ffmpeg-3.1.3_nvenc_701_Ubuntu1604_64Bits.xz
+chown -R root:root /tmp/oficinadotux/ffmpeg_nvenc/usr/*
+cp -aR /tmp/oficinadotux/ffmpeg_nvenc/usr/* /usr/
+rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
+
 tar -zvf obs-studio-portable_0.16.2.tgz
 mv obs-studio-portable /opt/
 
@@ -86,12 +89,10 @@ Type=Application
 Categories=AudioVideo;Recorder;
 StartupNotify=true' > /usr/share/applications/obs-portable.desktop
 
-
 ```
 
 
-
-# Bin FFMPEG 2.8.6 + NVENC
+# Bin FFMPEG 2.8.6 + NVENC SDK 6.0.1
 
 ```bash
 ## Para Instalar o Binario, execute os passos abaixo:
