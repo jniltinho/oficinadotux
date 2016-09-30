@@ -48,7 +48,7 @@ rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
 ```
 
 
-# OBS-STUDIO PORTABLE 0.16.2 + FFMPEG 3.1.3 NVENC SDK 7.0.1
+# OBS-STUDIO PORTABLE 0.16.2 + FFMPEG 3.1.3
 
 ```bash
 ## Para Instalar, execute os passos abaixo:
