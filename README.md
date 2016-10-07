@@ -6,28 +6,7 @@
  - OBS-STUDIO git Portable
  - Ubuntu, Kubuntu, Lubuntu 16.04 64Bits, Linux Mint 18 64Bits
  - Precisa ter uma placa NVIDIA e drivers atualizados
- - Recomendo Instalar o FFMPEG 3.1.4 com SDK 7.0.1
-
-
-
-## Bin FFMPEG 3.1.4 + NVENC SDK 7.0.1
-
-```bash
-## Para Instalar o Binario, execute os passos abaixo:
-## EXECUTAR COMO ROOT !!!!!
-
-sudo su
-apt-get -y install git-core ffmpeg libfdk-aac0
-
-cd /tmp/
-git clone https://github.com/jniltinho/oficinadotux
-cd /tmp/oficinadotux/ffmpeg_nvenc
-tar -vxf ffmpeg-3.1.4_sdk7_Ubuntu1604_64Bits.xz
-chown -R root:root /tmp/oficinadotux/ffmpeg_nvenc/usr/*
-cp -aR /tmp/oficinadotux/ffmpeg_nvenc/usr/* /usr/
-rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
-
-```
+ - Recomendo Instalar o FFMPEG git
 
 
 ## OBS-STUDIO PORTABLE git + FFMPEG git
@@ -43,6 +22,12 @@ apt-get install -y git-core ffmpeg libfdk-aac0 obs-studio
 
 cd /tmp/
 git clone https://github.com/jniltinho/oficinadotux
+cd /tmp/oficinadotux/ffmpeg_nvenc
+tar -vxf ffmpeg-2.8.6_sdk6_Ubuntu1604_64Bits.xz
+chown -R root:root /tmp/oficinadotux/ffmpeg_nvenc/usr/*
+cp -aR /tmp/oficinadotux/ffmpeg_nvenc/usr/* /usr/
+rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
+
 cd /tmp/oficinadotux/ffmpeg_nvenc
 tar -vxf ffmpeg-20161004_sdk7_Ubuntu1604_64Bits.xz
 chown -R root:root /tmp/oficinadotux/ffmpeg_nvenc/usr/*
@@ -74,7 +59,7 @@ StartupNotify=true' > /usr/share/applications/obs-portable.desktop
 ```
 
 
-# Bin FFMPEG 2.8.6 + NVENC SDK 6.0.1
+## Bin FFMPEG 3.1.4 + NVENC SDK 7.0.1
 
 ```bash
 ## Para Instalar o Binario, execute os passos abaixo:
@@ -86,12 +71,13 @@ apt-get -y install git-core ffmpeg libfdk-aac0
 cd /tmp/
 git clone https://github.com/jniltinho/oficinadotux
 cd /tmp/oficinadotux/ffmpeg_nvenc
-tar -vxf ffmpeg-2.8.6_sdk6_Ubuntu1604_64Bits.xz
+tar -vxf ffmpeg-3.1.4_sdk7_Ubuntu1604_64Bits.xz
 chown -R root:root /tmp/oficinadotux/ffmpeg_nvenc/usr/*
 cp -aR /tmp/oficinadotux/ffmpeg_nvenc/usr/* /usr/
 rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
 
 ```
+
 
 ## Compile FFMPEG 2.8.6 on Ubuntu 16.04 64Bits
 
