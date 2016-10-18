@@ -29,12 +29,12 @@ cp -aR /tmp/oficinadotux/ffmpeg_nvenc/usr/* /usr/
 rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
 
 cd /tmp/oficinadotux/ffmpeg_nvenc
-tar -vxf ffmpeg-20161004_sdk7_Ubuntu1604_64Bits.xz
+tar -vxf ffmpeg-3.1.4_sdk7_Ubuntu1604_64Bits.xz
 chown -R root:root /tmp/oficinadotux/ffmpeg_nvenc/usr/*
 cp -aR /tmp/oficinadotux/ffmpeg_nvenc/usr/* /usr/
 rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
 
-tar -xvf obs-studio-portable_20161004.tgz
+tar -xvf obs-studio-portable_20161018.tgz
 mv obs-studio-portable /opt/
 
 echo '#! /bin/sh
@@ -55,6 +55,8 @@ Terminal=false
 Type=Application
 Categories=AudioVideo;Recorder;
 StartupNotify=true' > /usr/share/applications/obs-portable.desktop
+
+dpkg -i /tmp/oficinadotux/ffmpeg_nvenc/mfx-dispatch_1.16-1_amd64.deb
 
 ```
 
