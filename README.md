@@ -19,25 +19,24 @@ sudo su
 add-apt-repository ppa:obsproject/obs-studio -y
 add-apt-repository ppa:djcj/hybrid -y
 apt-get update 
-apt-get install -y git-core ffmpeg libfdk-aac0 obs-studio libopenh264-3
+apt-get install -y ffmpeg libfdk-aac0 obs-studio libopenh264-3
 apt-get install -y librubberband2v5 libkvazaar3 libnetcdf11 libzimg2 libebur128-1
 
 wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
 dpkg -i libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb && rm -f libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
 
 cd /tmp/
-git clone https://github.com/jniltinho/oficinadotux
-cd /tmp/oficinadotux/ffmpeg_nvenc
+wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/ffmpeg-2.8.6_sdk6_Ubuntu1604_64Bits.xz
 tar -vxf ffmpeg-2.8.6_sdk6_Ubuntu1604_64Bits.xz
-chown -R root:root /tmp/oficinadotux/ffmpeg_nvenc/usr/*
-cp -aR /tmp/oficinadotux/ffmpeg_nvenc/usr/* /usr/
-rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
+chown -R root:root usr/*
+cp -aR usr/* /usr/
+rm -rf usr ffmpeg-2.8.6_sdk6_Ubuntu1604_64Bits.xz
 
-cd /tmp/oficinadotux/ffmpeg_nvenc
+wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/ffmpeg-3.2_sdk7_Ubuntu1604_64Bits.xz
 tar -vxf ffmpeg-3.2_sdk7_Ubuntu1604_64Bits.xz
-chown -R root:root /tmp/oficinadotux/ffmpeg_nvenc/usr/*
-cp -aR /tmp/oficinadotux/ffmpeg_nvenc/usr/* /usr/
-rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
+chown -R root:root usr/*
+cp -aR usr/* /usr/
+rm -rf usr ffmpeg-3.2_sdk7_Ubuntu1604_64Bits.xz
 
 tar -xvf obs-studio-portable_20161101.tgz
 mv obs-studio-portable /opt/
@@ -64,7 +63,7 @@ StartupNotify=true' > /usr/share/applications/obs-portable.desktop
 ```
 
 
-## Bin FFMPEG 3.2 + NVENC SDK 7.0.1
+## FFMPEG 3.2 + NVENC SDK 7.0.1
 
 ```bash
 ## Para Instalar o Binario, execute os passos abaixo:
@@ -80,12 +79,11 @@ wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/libvidsta
 dpkg -i libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb && rm -f libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
 
 cd /tmp/
-git clone https://github.com/jniltinho/oficinadotux
-cd /tmp/oficinadotux/ffmpeg_nvenc
+wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/ffmpeg-3.2_sdk7_Ubuntu1604_64Bits.xz
 tar -vxf ffmpeg-3.2_sdk7_Ubuntu1604_64Bits.xz
-chown -R root:root /tmp/oficinadotux/ffmpeg_nvenc/usr/*
-cp -aR /tmp/oficinadotux/ffmpeg_nvenc/usr/* /usr/
-rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
+chown -R root:root usr/*
+cp -aR usr/* /usr/
+rm -rf usr ffmpeg-3.2_sdk7_Ubuntu1604_64Bits.xz
 
 ```
 
@@ -95,11 +93,15 @@ rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
 [Compile FFMPEG 2.8.6 + NVENC](https://gist.github.com/jniltinho/96bb45bec18a90d0d33448ee67c28cc7)
 
 
+## Compile FFMPEG 3.2 on Ubuntu 16.04 64Bits
+
+[Compile FFMPEG 3.2 + NVENC](https://gist.github.com/jniltinho/9273dc133796062c13ca739d17862125)
+
 ## FFMPEG STATIC BIN
 
  - [Site](https://www.johnvansickle.com/ffmpeg/)
  - [Git Last Release 64Bits](https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-64bit-static.tar.xz)
- - [Release 3.1.3 64Bits](https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz)
+ - [Release 3.2 64Bits](https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-64bit-static.tar.xz)
 
 
 ## Compile OBS-STUDIO
