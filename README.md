@@ -1,15 +1,15 @@
 ## Oficinadotux -- FFMPEG + NVENC
 [Youtube Channel OficinadoTux](https://www.youtube.com/channel/UCfh_Dbh1LrqGVJQ1k2f6DgQ)
 
- - FFMPEG git, 3.1.5, 2.8.6
+ - FFMPEG git, 3.2, 2.8.6
  - NVIDIA SDK 6.0.1, 7.0.1
  - OBS-STUDIO git Portable
  - Ubuntu, Kubuntu, Lubuntu 16.04 64Bits, Linux Mint 18 64Bits
  - Precisa ter uma placa NVIDIA e drivers atualizados
- - Recomendo Instalar o OBS-STUDIO PORTABLE git + FFMPEG 3.1.5
+ - Recomendo Instalar o OBS-STUDIO PORTABLE git + FFMPEG 3.2
 
 
-## OBS-STUDIO PORTABLE git + FFMPEG 3.1.5
+## OBS-STUDIO PORTABLE git + FFMPEG 3.2
 
 ```bash
 ## Para Instalar, execute os passos abaixo:
@@ -17,8 +17,13 @@
 
 sudo su
 add-apt-repository ppa:obsproject/obs-studio -y
+add-apt-repository ppa:djcj/hybrid -y
 apt-get update 
-apt-get install -y git-core ffmpeg libfdk-aac0 obs-studio
+apt-get install -y git-core ffmpeg libfdk-aac0 obs-studio libopenh264-3
+apt-get install -y librubberband2v5 libkvazaar3 libnetcdf11 libzimg2 libebur128-1
+
+wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
+dpkg -i libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb && rm -f libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
 
 cd /tmp/
 git clone https://github.com/jniltinho/oficinadotux
@@ -29,12 +34,12 @@ cp -aR /tmp/oficinadotux/ffmpeg_nvenc/usr/* /usr/
 rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
 
 cd /tmp/oficinadotux/ffmpeg_nvenc
-tar -vxf ffmpeg-3.1.5_sdk7_Ubuntu1604_64Bits.xz
+tar -vxf ffmpeg-3.2_sdk7_Ubuntu1604_64Bits.xz
 chown -R root:root /tmp/oficinadotux/ffmpeg_nvenc/usr/*
 cp -aR /tmp/oficinadotux/ffmpeg_nvenc/usr/* /usr/
 rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
 
-tar -xvf obs-studio-portable_20161025.tgz
+tar -xvf obs-studio-portable_20161101.tgz
 mv obs-studio-portable /opt/
 
 echo '#! /bin/sh
@@ -59,19 +64,25 @@ StartupNotify=true' > /usr/share/applications/obs-portable.desktop
 ```
 
 
-## Bin FFMPEG 3.1.5 + NVENC SDK 7.0.1
+## Bin FFMPEG 3.2 + NVENC SDK 7.0.1
 
 ```bash
 ## Para Instalar o Binario, execute os passos abaixo:
 ## EXECUTAR COMO ROOT !!!!!
 
 sudo su
-apt-get -y install git-core ffmpeg libfdk-aac0
+add-apt-repository ppa:djcj/hybrid -y
+apt-get update 
+apt-get install -y git-core ffmpeg libfdk-aac0 libopenh264-3
+apt-get install -y librubberband2v5 libkvazaar3 libnetcdf11 libzimg2 libebur128-1
+
+wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
+dpkg -i libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb && rm -f libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
 
 cd /tmp/
 git clone https://github.com/jniltinho/oficinadotux
 cd /tmp/oficinadotux/ffmpeg_nvenc
-tar -vxf ffmpeg-3.1.5_sdk7_Ubuntu1604_64Bits.xz
+tar -vxf ffmpeg-3.2_sdk7_Ubuntu1604_64Bits.xz
 chown -R root:root /tmp/oficinadotux/ffmpeg_nvenc/usr/*
 cp -aR /tmp/oficinadotux/ffmpeg_nvenc/usr/* /usr/
 rm -rf /tmp/oficinadotux/ffmpeg_nvenc/usr
