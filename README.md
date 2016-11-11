@@ -38,7 +38,7 @@ chown -R root:root usr/*
 cp -aR usr/* /usr/
 rm -rf usr ffmpeg-3.2_sdk7_Ubuntu1604_64Bits.xz
 
-tar -xvf obs-studio-portable_20161101.tgz
+tar -xvf obs-studio-portable_20161111.tgz
 mv obs-studio-portable /opt/
 
 echo '#! /bin/sh
@@ -72,7 +72,7 @@ StartupNotify=true' > /usr/share/applications/obs-portable.desktop
 sudo su
 add-apt-repository ppa:djcj/hybrid -y
 apt-get update 
-apt-get install -y git-core ffmpeg libfdk-aac0 libopenh264-3
+apt-get install -y ffmpeg libfdk-aac0 libopenh264-3
 apt-get install -y librubberband2v5 libkvazaar3 libnetcdf11 libzimg2 libebur128-1
 
 wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
