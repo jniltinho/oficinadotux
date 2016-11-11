@@ -38,7 +38,9 @@ chown -R root:root usr/*
 cp -aR usr/* /usr/
 rm -rf usr ffmpeg-3.2_sdk7_Ubuntu1604_64Bits.xz
 
+wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/obs-studio-portable_20161111.tgz
 tar -xvf obs-studio-portable_20161111.tgz
+rm -f obs-studio-portable_20161111.tgz
 mv obs-studio-portable /opt/
 
 echo '#! /bin/sh
