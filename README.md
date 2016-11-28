@@ -16,11 +16,12 @@
 ## EXECUTAR COMO ROOT !!!!!
 
 sudo su
+apt-get -y install ffmpeg
 add-apt-repository ppa:obsproject/obs-studio -y
 add-apt-repository ppa:djcj/hybrid -y
 apt-get update 
-apt-get install -y ffmpeg libfdk-aac0 obs-studio libopenh264-3
-apt-get install -y librubberband2v5 libkvazaar3 libnetcdf11 libzimg2 libebur128-1
+apt-get -y install libfdk-aac0 obs-studio libopenh264-3
+apt-get -y install librubberband2v5 libkvazaar3 libnetcdf11 libzimg2 libebur128-1
 
 wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
 dpkg -i libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb && rm -f libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
@@ -38,7 +39,7 @@ chown -R root:root usr/*
 cp -aR usr/* /usr/
 rm -rf usr ffmpeg-3.2.1_sdk7_Ubuntu1604_64Bits.xz
 
-wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/oobs-studio-portable_20161128.tgz
+wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/obs-studio-portable_20161128.tgz
 tar -xvf obs-studio-portable_20161128.tgz
 rm -f obs-studio-portable_20161128.tgz
 mv obs-studio-portable /opt/
@@ -72,11 +73,11 @@ StartupNotify=true' > /usr/share/applications/obs-portable.desktop
 ## EXECUTAR COMO ROOT !!!!!
 
 sudo su
-apt-get install -y ffmpeg
+apt-get -y install ffmpeg
 add-apt-repository ppa:djcj/hybrid -y
 apt-get update 
-apt-get install -y libfdk-aac0 libopenh264-3
-apt-get install -y librubberband2v5 libkvazaar3 libnetcdf11 libzimg2 libebur128-1
+apt-get -y install libfdk-aac0 libopenh264-3
+apt-get -y install librubberband2v5 libkvazaar3 libnetcdf11 libzimg2 libebur128-1
 
 wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
 dpkg -i libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb && rm -f libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
