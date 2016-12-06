@@ -1,15 +1,15 @@
 ## Oficinadotux -- FFMPEG + NVENC
 [Youtube Channel OficinadoTux](https://www.youtube.com/channel/UCfh_Dbh1LrqGVJQ1k2f6DgQ)
 
- - FFMPEG git, 3.2.1, 2.8.6
+ - FFMPEG git, 3.2.2, 2.8.6
  - NVIDIA SDK 6.0.1, 7.0.1
  - OBS-STUDIO git Portable
  - Ubuntu, Kubuntu, Lubuntu 16.04 64Bits, Linux Mint 18 64Bits
  - Precisa ter uma placa NVIDIA e drivers atualizados
- - Recomendo Instalar o OBS-STUDIO PORTABLE git + FFMPEG 3.2.1
+ - Recomendo Instalar o OBS-STUDIO PORTABLE git + FFMPEG 3.2.2
 
 
-## OBS-STUDIO PORTABLE git + FFMPEG 3.2.1
+## OBS-STUDIO PORTABLE git + FFMPEG 3.2.2
 
 ```bash
 ## Para Instalar, execute os passos abaixo:
@@ -33,15 +33,15 @@ chown -R root:root usr/*
 cp -aR usr/* /usr/
 rm -rf usr ffmpeg-2.8.6_sdk6_Ubuntu1604_64Bits.xz
 
-wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/ffmpeg-3.2.1_sdk7_Ubuntu1604_64Bits.xz
-tar -vxf ffmpeg-3.2.1_sdk7_Ubuntu1604_64Bits.xz
+wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz
+tar -vxf ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz
 chown -R root:root usr/*
 cp -aR usr/* /usr/
-rm -rf usr ffmpeg-3.2.1_sdk7_Ubuntu1604_64Bits.xz
+rm -rf usr ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz
 
-wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/obs-studio-portable_20161128.tgz
-tar -xvf obs-studio-portable_20161128.tgz
-rm -f obs-studio-portable_20161128.tgz
+wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/obs-studio-portable_20161206.tgz
+tar -xvf obs-studio-portable_*.tgz
+rm -f obs-studio-portable_*.tgz
 mv obs-studio-portable /opt/
 
 echo '#! /bin/sh
@@ -66,7 +66,7 @@ StartupNotify=true' > /usr/share/applications/obs-portable.desktop
 ```
 
 
-## FFMPEG 3.2.1 + NVENC SDK 7.0.1
+## FFMPEG 3.2.2 + NVENC SDK 7.0.1
 
 ```bash
 ## Para Instalar o Binario, execute os passos abaixo:
@@ -83,11 +83,11 @@ wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/libvidsta
 dpkg -i libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb && rm -f libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
 
 cd /tmp/
-wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/ffmpeg-3.2.1_sdk7_Ubuntu1604_64Bits.xz
-tar -vxf ffmpeg-3.2.1_sdk7_Ubuntu1604_64Bits.xz
+wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz
+tar -vxf ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz
 chown -R root:root usr/*
 cp -aR usr/* /usr/
-rm -rf usr ffmpeg-3.2.1_sdk7_Ubuntu1604_64Bits.xz
+rm -rf usr ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz
 
 ```
 
