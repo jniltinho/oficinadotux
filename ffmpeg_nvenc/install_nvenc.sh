@@ -18,7 +18,6 @@ echo "You must run the script as root or using sudo"
 fi
 
 
-sudo su
 apt-get -y install ffmpeg
 add-apt-repository ppa:obsproject/obs-studio -y
 add-apt-repository ppa:djcj/hybrid -y

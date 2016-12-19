@@ -19,7 +19,8 @@ cd /tmp/
 wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/install_nvenc.sh
 
 chmod +x install_nvenc.sh
-./install_nvenc.sh
+bash install_nvenc.sh
+rm -f install_nvenc.sh
 
 
 ```
