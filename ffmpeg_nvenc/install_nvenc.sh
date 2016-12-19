@@ -18,12 +18,16 @@ echo "You must run the script as root or using sudo"
 fi
 
 
-apt-get -y install ffmpeg
 add-apt-repository ppa:obsproject/obs-studio -y
+apt-get update
+apt-get -y install libfdk-aac0 obs-studio libopenh264-3 ffmpeg
+apt-add-repository --remove ppa:obsproject/obs-studio -y
+
 add-apt-repository ppa:djcj/hybrid -y
 apt-get update 
-apt-get -y install libfdk-aac0 obs-studio libopenh264-3
 apt-get -y install librubberband2v5 libkvazaar3 libnetcdf11 libzimg2 libebur128-1
+apt-add-repository --remove ppa:djcj/hybrid -y
+apt-get update
 
 wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
 dpkg -i libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb && rm -f libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
