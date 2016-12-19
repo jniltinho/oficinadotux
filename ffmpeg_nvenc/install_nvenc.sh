@@ -42,6 +42,7 @@ cp -aR usr/* /usr/
 rm -rf usr ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz
 
 wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/obs-studio-portable_20161206.tgz
+rm -rf /opt/obs-studio-portable
 tar -xvf obs-studio-portable_*.tgz
 rm -f obs-studio-portable_*.tgz
 mv obs-studio-portable /opt/
