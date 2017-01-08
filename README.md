@@ -12,6 +12,12 @@
 ```bash
 ## Para Instalar, execute os passos abaixo:
 ## EXECUTAR COMO ROOT !!!!!
+## Use por sua conta e risco, no meu Desktop Ubuntu 16.04 funcionou perfeitamente.
+## Esses são Binarios já compilados do OBS e FFMPEG, só funciona em sistemas 64Bits.
+## Para Reportar Bug use o link: https://github.com/jniltinho/oficinadotux/issues.
+## Se possivel com Print de Tela ou a saida com erro na linha de comando.
+## Você pode executar os binarios via linha de comando: obs-portable e ffmpeg.
+## Desse modo fica facil aparecer os erros.
 
 sudo su
 
