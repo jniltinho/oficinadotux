@@ -20,7 +20,7 @@ fi
 
 add-apt-repository ppa:obsproject/obs-studio -y
 apt-get update
-apt-get -y install libfdk-aac0 obs-studio libopenh264-3 ffmpeg
+apt-get -y install libfdk-aac0 obs-studio libopenh264-3 ffmpeg libchromaprint0
 apt-add-repository --remove ppa:obsproject/obs-studio -y
 
 add-apt-repository ppa:djcj/hybrid -y
@@ -29,27 +29,58 @@ apt-get -y install librubberband2v5 libkvazaar3 libnetcdf11 libzimg2 libebur128-
 apt-add-repository --remove ppa:djcj/hybrid -y
 apt-get update
 
+cd /tmp/
 wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
-dpkg -i libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb && rm -f libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
+
+if [ -f libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb ]
+then
+	dpkg -i libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
+	rm -f libvidstab1.0_0.98b-dmo1+deb8u1_amd64.deb
+else
+	exit $?
+fi
 
 cd /tmp/
 wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/ffmpeg-2.8.6_sdk6_Ubuntu1604_64Bits.xz
-tar -vxf ffmpeg-2.8.6_sdk6_Ubuntu1604_64Bits.xz
-chown -R root:root usr/*
-cp -aR usr/* /usr/
-rm -rf usr ffmpeg-2.8.6_sdk6_Ubuntu1604_64Bits.xz
 
+if [ -f ffmpeg-2.8.6_sdk6_Ubuntu1604_64Bits.xz ]
+then
+	tar -vxf ffmpeg-2.8.6_sdk6_Ubuntu1604_64Bits.xz
+	chown -R root:root usr/*
+	cp -aR /tmp/usr/* /usr/
+	rm -rf /tmp/usr /tmp/ffmpeg-2.8.6_sdk6_Ubuntu1604_64Bits.xz
+else
+	exit $?
+fi
+
+
+cd /tmp/
 wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz
-tar -vxf ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz
-chown -R root:root usr/*
-cp -aR usr/* /usr/
-rm -rf usr ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz
 
+if [ -f ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz ]
+then
+	tar -vxf ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz
+	chown -R root:root /tmp/usr/*
+	cp -aR /tmp/usr/* /usr/
+	rm -rf /tmp/usr /tmp/ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz
+else
+	exit $?
+fi
+
+
+cd /tmp/
 wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/obs-studio-portable_20161230.tgz
-rm -rf /opt/obs-studio-portable
-tar -xvf obs-studio-portable_*.tgz
-rm -f obs-studio-portable_*.tgz
-mv obs-studio-portable /opt/
+
+if [ -f obs-studio-portable_20161230.tgz ]
+then
+	rm -rf /opt/obs-studio-portable
+	tar -xvf obs-studio-portable_*.tgz
+	rm -f /tmp/obs-studio-portable_*.tgz
+	mv obs-studio-portable /opt/
+else
+	exit $?
+fi
+
 
 echo '#! /bin/sh
 
