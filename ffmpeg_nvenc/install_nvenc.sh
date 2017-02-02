@@ -19,8 +19,9 @@ fi
 
 
 add-apt-repository ppa:obsproject/obs-studio -y
+add-apt-repository ppa:graphics-drivers/ppa -y
 apt-get update
-apt-get -y install libfdk-aac0 obs-studio libopenh264-3 ffmpeg libchromaprint0
+apt-get -y install libnppi7.5 libfdk-aac0 obs-studio libopenh264-3 ffmpeg libchromaprint0
 apt-add-repository --remove ppa:obsproject/obs-studio -y
 
 add-apt-repository ppa:djcj/hybrid -y
