@@ -69,9 +69,9 @@ fi
 
 
 cd /tmp/
-wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/obs-studio-portable_20161230.tgz
+wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/obs-studio-portable_20170202.tgz
 
-if [ -f obs-studio-portable_20161230.tgz ]
+if [ -f obs-studio-portable_20170202.tgz ]
 then
 	rm -rf /opt/obs-studio-portable
 	tar -xvf obs-studio-portable_*.tgz
