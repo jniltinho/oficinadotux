@@ -56,23 +56,23 @@ fi
 
 
 cd /tmp/
-wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz
+wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/ffmpeg-git_sdk7_Ubuntu1604_64Bits.xz
 
-if [ -f ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz ]
+if [ -f ffmpeg-git_sdk7_Ubuntu1604_64Bits.xz ]
 then
-	tar -vxf ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz
+	tar -vxf ffmpeg-git_sdk7_Ubuntu1604_64Bits.xz
 	chown -R root:root /tmp/usr/*
 	cp -aR /tmp/usr/* /usr/
-	rm -rf /tmp/usr /tmp/ffmpeg-3.2.2_sdk7_Ubuntu1604_64Bits.xz
+	rm -rf /tmp/usr /tmp/ffmpeg-git_sdk7_Ubuntu1604_64Bits.xz
 else
 	exit $?
 fi
 
 
 cd /tmp/
-wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/obs-studio-portable_20170202.tgz
+wget https://github.com/jniltinho/oficinadotux/raw/master/ffmpeg_nvenc/obs-studio-portable_20170315.tgz
 
-if [ -f obs-studio-portable_20170202.tgz ]
+if [ -f obs-studio-portable_20170315.tgz ]
 then
 	rm -rf /opt/obs-studio-portable
 	tar -xvf obs-studio-portable_*.tgz

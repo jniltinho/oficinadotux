@@ -7,7 +7,7 @@
  - Precisa ter uma placa NVIDIA e drivers atualizados
 
 
-## OBS-STUDIO + FFMPEG 3.2.2
+## OBS-STUDIO + FFMPEG
 
 ```bash
 ## Para Instalar, execute os passos abaixo:
@@ -33,9 +33,9 @@ rm -f install_nvenc.sh
 
 
 
-## Compile FFMPEG 3.2 on Ubuntu 16.04 64Bits
+## Compile FFMPEG on Ubuntu 16.04 64Bits
 
-[Compile FFMPEG 3.2 + NVENC](https://gist.github.com/jniltinho/9273dc133796062c13ca739d17862125)
+[Compile FFMPEG + NVENC](https://gist.github.com/jniltinho/9273dc133796062c13ca739d17862125)
 
 
 ## Compile FFMPEG 2.8.6 on Ubuntu 16.04 64Bits
@@ -45,5 +45,5 @@ rm -f install_nvenc.sh
 
 ## OBS-STUDIO
 
- - [OBS-STUDIO 17.0.0](https://github.com/jp9000/obs-studio/wiki/Install-Instructions#manually-compiling-on-debian-based-distros)
+ - [OBS-STUDIO 18](https://github.com/jp9000/obs-studio/wiki/Install-Instructions#manually-compiling-on-debian-based-distros)
  - [OBS Releases](https://github.com/jp9000/obs-studio/releases)
