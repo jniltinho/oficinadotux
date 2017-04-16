@@ -21,12 +21,12 @@ fi
 add-apt-repository ppa:obsproject/obs-studio -y
 add-apt-repository ppa:graphics-drivers/ppa -y
 apt-get update
-apt-get -y install libnppi7.5 libfdk-aac0 obs-studio libopenh264-3 ffmpeg libchromaprint0
+apt-get -y install libnppi7.5 libfdk-aac0 obs-studio ffmpeg libchromaprint0 libopencore-amrwb0 libopencore-amrnb0
 apt-add-repository --remove ppa:obsproject/obs-studio -y
 
 add-apt-repository ppa:djcj/hybrid -y
 apt-get update 
-apt-get -y install librubberband2v5 libkvazaar3 libnetcdf11 libzimg2 libebur128-1
+apt-get -y install librubberband2v5 libkvazaar3 libnetcdf11 libzimg2 libebur128-1 libopenh264-3
 apt-add-repository --remove ppa:djcj/hybrid -y
 apt-get update
 
