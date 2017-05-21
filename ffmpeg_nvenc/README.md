@@ -2,7 +2,7 @@
 [Youtube Channel OficinadoTux](https://www.youtube.com/channel/UCfh_Dbh1LrqGVJQ1k2f6DgQ)
 
  - FFMPEG git, 3.2.2, 2.8.6
- - NVIDIA SDK 6.0.1, 7.1.9
+ - NVIDIA SDK 6.0.1, 7.1.9, 8.0.14
  - Ubuntu, Kubuntu, Lubuntu 16.04 64Bits, Linux Mint 18 64Bits
  - Precisa ter uma placa NVIDIA e drivers atualizados
 
