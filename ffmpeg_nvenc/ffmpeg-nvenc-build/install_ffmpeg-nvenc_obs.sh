@@ -86,12 +86,12 @@ cd FFmpeg-master
 --enable-libgme --enable-libgsm --enable-libiec61883 --enable-libmodplug \
 --enable-libmp3lame --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopencv \
 --enable-libopenjpeg --enable-libopus --enable-libpulse \
---enable-librubberband --enable-librtmp --enable-libschroedinger --enable-libshine --enable-libsmbclient \
+--enable-librubberband --enable-librtmp --enable-libshine --enable-libsmbclient \
 --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora \
 --enable-libtwolame --enable-libv4l2 --enable-libvidstab --enable-libvo-amrwbenc --enable-libvorbis --enable-libvpx \
 --enable-libwavpack --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxcb --enable-libxcb-shm \
 --enable-libxcb-xfixes --enable-libxcb-shape --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi \
---enable-netcdf --enable-openal --enable-opencl --enable-opengl --enable-openssl \
+--enable-openal --enable-opencl --enable-opengl --enable-openssl \
 --enable-sdl2 --enable-vaapi --enable-vdpau --enable-videotoolbox --enable-libxcb --enable-xlib \
 --enable-zlib --enable-cuda --enable-cuvid --enable-nvenc --enable-pic --enable-libnpp
 
