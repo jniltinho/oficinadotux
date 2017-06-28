@@ -28,6 +28,7 @@ fi
 cd /root/
 mkdir -p /root/files_bin/
 
+cp /etc/apt/sources.list /etc/apt/sources.list_$$.bkp
 sed -i -e "/^# deb-src .*xenial universe/ s/^# //" /etc/apt/sources.list
 add-apt-repository ppa:graphics-drivers/ppa -y
 apt-get update
