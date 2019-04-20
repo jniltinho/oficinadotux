@@ -1,11 +1,9 @@
-# Oficinadotux -- FFMPEG + NVENC
+# FFMPEG + OBS STUDIO + NVENC
 
-[Youtube Channel OficinadoTux](https://www.youtube.com/channel/UCfh_Dbh1LrqGVJQ1k2f6DgQ)
-
- - FFMPEG git, 3.2.2, 2.8.6
- - NVIDIA SDK 6.0.1, 7.1.9, 8.0.14
- - Ubuntu, Kubuntu, Lubuntu 16.04 64Bits, Linux Mint 18 64Bits
- - Precisa ter uma placa NVIDIA e drivers atualizados
+ * FFMPEG 4.1.3
+ * OBS STUDIO 23.1.0
+ * Ubuntu, Kubuntu, Lubuntu 16.04|18.04|19.04 64Bits
+ * Precisa ter uma placa NVIDIA e drivers atualizados
 
 ## Install Compiled files (FFMPEG and OBS STUDIO)
 
@@ -30,10 +28,7 @@ apt-get update
 apt-get -y install ffmpeg obs-studio
 
 cd /tmp/
-wget -O ubuntu-xenial.zip https://gitlab.com/jniltinho/docker-ffmpeg/-/jobs/199843935/artifacts/download
-unzip ubuntu-xenial.zip
-rm -f ubuntu-xenial.zip
-cd dist
+wget https://github.com/jniltinho/oficinadotux/raw/master/dist/xenial/ffmpeg-obs-nvenc_2.0.0%2Bxenial-1_amd64.tar.gz
 tar -xzf *.tar.gz
 cp -vaR usr/* /usr/
 cp -vaR opt/* /opt/
@@ -50,10 +45,7 @@ apt-get update
 apt-get -y install ffmpeg obs-studio
 
 cd /tmp/
-wget -O ubuntu-bionic.zip https://gitlab.com/jniltinho/docker-ffmpeg/-/jobs/199843936/artifacts/download
-unzip ubuntu-bionic.zip
-rm -f ubuntu-bionic.zip
-cd dist
+wget https://github.com/jniltinho/oficinadotux/raw/master/dist/bionic/ffmpeg-obs-nvenc_2.0.0%2Bbionic-1_amd64.tar.gz
 tar -xzf *.tar.gz
 cp -vaR usr/* /usr/
 cp -vaR opt/* /opt/
@@ -69,25 +61,18 @@ apt-get update
 apt-get -y install ffmpeg obs-studio
 
 cd /tmp/
-wget -O ubuntu-disco.zip https://gitlab.com/jniltinho/docker-ffmpeg/-/jobs/199843937/artifacts/download
-unzip ubuntu-disco.zip
-rm -f ubuntu-disco.zip
-cd dist
+wget https://github.com/jniltinho/oficinadotux/raw/master/dist/disco/ffmpeg-obs-nvenc_2.0.0%2Bdisco-1_amd64.tar.gz
 tar -xzf *.tar.gz
 cp -vaR usr/* /usr/
 cp -vaR opt/* /opt/
 rm -rf opt usr
 ```
 
-## Compile FFMPEG on Ubuntu 16.04 64Bits
+## GitLab Project FFMPEG + OBS + NVENC on Ubuntu 16.04|18.04|19.04 64Bits
 
-[Compile FFMPEG + NVENC](https://gist.github.com/jniltinho/9273dc133796062c13ca739d17862125)
-
-## Compile FFMPEG 2.8.6 on Ubuntu 16.04 64Bits
-
-[Compile FFMPEG 2.8.6 + NVENC](https://gist.github.com/jniltinho/96bb45bec18a90d0d33448ee67c28cc7)
+[Compile FFMPEG + NVENC](https://gitlab.com/jniltinho/docker-ffmpeg)
 
 ## OBS-STUDIO
 
- - [OBS-STUDIO 18](https://github.com/jp9000/obs-studio/wiki/Install-Instructions#manually-compiling-on-debian-based-distros)
- - [OBS Releases](https://github.com/jp9000/obs-studio/releases)
+ * [OBS-STUDIO 23.1.0](https://github.com/jp9000/obs-studio/wiki/Install-Instructions#manually-compiling-on-debian-based-distros)
+ * [OBS Releases](https://github.com/jp9000/obs-studio/releases)
