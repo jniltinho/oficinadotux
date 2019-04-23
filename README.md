@@ -28,11 +28,8 @@ apt-get update
 apt-get -y install ffmpeg obs-studio
 
 cd /tmp/
-wget https://github.com/jniltinho/oficinadotux/raw/master/dist/xenial/ffmpeg-obs-nvenc_2.0.0%2Bxenial-1_amd64.tar.gz
-tar -xzf *.tar.gz
-cp -vaR usr/* /usr/
-cp -vaR opt/* /opt/
-rm -rf opt usr
+wget https://github.com/jniltinho/oficinadotux/raw/master/dist/ffmpeg-obs-nvenc_23.1.0+xenial-1_amd64.deb
+dpkg -i ffmpeg-obs-nvenc_23.1.0+xenial-1_amd64.deb
 ```
 
 ### Ubuntu Bionic
@@ -45,11 +42,8 @@ apt-get update
 apt-get -y install ffmpeg obs-studio
 
 cd /tmp/
-wget https://github.com/jniltinho/oficinadotux/raw/master/dist/bionic/ffmpeg-obs-nvenc_2.0.0%2Bbionic-1_amd64.tar.gz
-tar -xzf *.tar.gz
-cp -vaR usr/* /usr/
-cp -vaR opt/* /opt/
-rm -rf opt usr
+wget https://github.com/jniltinho/oficinadotux/raw/master/dist/ffmpeg-obs-nvenc_23.1.0+bionic-1_amd64.deb
+dpkg -i ffmpeg-obs-nvenc_23.1.0+bionic-1_amd64.deb
 ```
 
 ### Ubuntu Disco
@@ -61,11 +55,8 @@ apt-get update
 apt-get -y install ffmpeg obs-studio
 
 cd /tmp/
-wget https://github.com/jniltinho/oficinadotux/raw/master/dist/disco/ffmpeg-obs-nvenc_2.0.0%2Bdisco-1_amd64.tar.gz
-tar -xzf *.tar.gz
-cp -vaR usr/* /usr/
-cp -vaR opt/* /opt/
-rm -rf opt usr
+wget https://github.com/jniltinho/oficinadotux/raw/master/dist/ffmpeg-obs-nvenc_23.1.0+disco-1_amd64.deb
+dpkg -i ffmpeg-obs-nvenc_23.1.0+disco-1_amd64.deb
 ```
 
 ## GitLab Project FFMPEG + OBS + NVENC on Ubuntu 16.04|18.04|19.04 64Bits
