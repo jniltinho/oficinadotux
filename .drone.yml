@@ -14,12 +14,17 @@ steps:
     image: ubuntu:xenial
     commands:
       - export DEBIAN_FRONTEND=noninteractive
+      - pwd
+      - ls -ilah
+      - ls /
       - cd scripts
       - bash NVENC-FFMPEG-OBSbuild.sh --dest /opt/ffmpeg-obs
       - mkdir -p /build/dist/
       - mv /root/dist/ffmpeg-obs-nvenc_* /build/dist/
+    when:
+      event: master
 
-
+      
   - name: build-bionic
     image: ubuntu:bionic
     commands:
@@ -28,6 +33,8 @@ steps:
       - bash NVENC-FFMPEG-OBSbuild.sh --dest /opt/ffmpeg-obs
       - mkdir -p /build/dist/
       - mv /root/dist/ffmpeg-obs-nvenc_* /build/dist/
+    when:
+      event: master2
 
 
   - name: build-disco
@@ -38,10 +45,16 @@ steps:
       - bash NVENC-FFMPEG-OBSbuild.sh --dest /opt/ffmpeg-obs
       - mkdir -p /build/dist/
       - mv /root/dist/ffmpeg-obs-nvenc_* /build/dist/
+    when:
+      event: master2
 
 
   - name: publish
     image: plugins/github-release
     settings:
       api_key: $GITHUB_API_KEY
-      files: dist/*
+      files: 
+        - dist/*
+      checksum:
+        - md5
+        - sha1
