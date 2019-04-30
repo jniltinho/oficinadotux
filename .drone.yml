@@ -1,3 +1,7 @@
+
+## Links
+## http://plugins.drone.io/drone-plugins/drone-github-release/
+
 kind: pipeline
 name: default
 
@@ -15,7 +19,7 @@ steps:
       - mkdir -p /build/dist/
       - mv /root/dist/ffmpeg-obs-nvenc_* /build/dist/
 
-      
+
   - name: build-bionic
     image: ubuntu:bionic
     commands:
@@ -41,5 +45,3 @@ steps:
     settings:
       api_key: $GITHUB_API_KEY
       files: dist/*
-    when:
-       event: tag
