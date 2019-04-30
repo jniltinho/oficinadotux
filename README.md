@@ -1,5 +1,7 @@
 # FFMPEG + OBS STUDIO + NVENC
 
+[![Build Status](https://cloud.drone.io/api/badges/jniltinho/oficinadotux/status.svg)](https://cloud.drone.io/jniltinho/oficinadotux)
+
  * FFMPEG 4.1.3
  * OBS STUDIO 23.1.0
  * Ubuntu, Kubuntu, Lubuntu 16.04|18.04|19.04 64Bits
