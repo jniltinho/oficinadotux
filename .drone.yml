@@ -6,21 +6,21 @@ name: default
 #  path: src/github.com/yourname/go-drone-hello-world
 
 steps:
-  - name: build
+  - name: build-xenial
     image: ubuntu:xenial
     commands:
       - export DEBIAN_FRONTEND=noninteractive
       - cd scripts
       - bash install-ffmpeg.sh
 
-  - name: build
+  - name: build-bionic
     image: ubuntu:bionic
     commands:
       - export DEBIAN_FRONTEND=noninteractive
       - cd scripts
       - bash install-ffmpeg.sh
 
-  - name: build
+  - name: build-disco
     image: ubuntu:disco
     commands:
       - export DEBIAN_FRONTEND=noninteractive
