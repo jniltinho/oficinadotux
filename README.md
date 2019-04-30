@@ -30,7 +30,7 @@ apt-get update
 apt-get -y install ffmpeg obs-studio
 
 cd /tmp/
-wget https://github.com/jniltinho/oficinadotux/releases/download/1.0.2/ffmpeg-obs-nvenc_23.1.0+xenial-1_amd64.deb
+wget https://github.com/jniltinho/oficinadotux/releases/download/1.0.3/ffmpeg-obs-nvenc_23.1.0+xenial-1_amd64.deb
 dpkg -i ffmpeg-obs-nvenc_23.1.0+xenial-1_amd64.deb
 ```
 
@@ -44,7 +44,7 @@ apt-get update
 apt-get -y install ffmpeg obs-studio
 
 cd /tmp/
-wget https://github.com/jniltinho/oficinadotux/releases/download/1.0.2/ffmpeg-obs-nvenc_23.1.0+bionic-1_amd64.deb
+wget https://github.com/jniltinho/oficinadotux/releases/download/1.0.3/ffmpeg-obs-nvenc_23.1.0+bionic-1_amd64.deb
 dpkg -i ffmpeg-obs-nvenc_23.1.0+bionic-1_amd64.deb
 ```
 
@@ -57,7 +57,7 @@ apt-get update
 apt-get -y install ffmpeg obs-studio
 
 cd /tmp/
-wget https://github.com/jniltinho/oficinadotux/releases/download/1.0.2/ffmpeg-obs-nvenc_23.1.0+disco-1_amd64.deb
+wget https://github.com/jniltinho/oficinadotux/releases/download/1.0.3/ffmpeg-obs-nvenc_23.1.0+disco-1_amd64.deb
 dpkg -i ffmpeg-obs-nvenc_23.1.0+disco-1_amd64.deb
 ```
 
