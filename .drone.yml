@@ -14,9 +14,6 @@ steps:
     image: ubuntu:xenial
     commands:
       - export DEBIAN_FRONTEND=noninteractive
-      - pwd
-      - ls -ilah
-      - ls /
       - cd scripts
       - bash NVENC-FFMPEG-OBSbuild.sh --dest /opt/ffmpeg-obs
       - mkdir -p /build/dist/
@@ -45,10 +42,21 @@ steps:
       branch: master2
 
 
+  - name: check-folder
+    image: ubuntu:xenial
+    commands:
+      - pwd
+      - ls /
+      - ls -ilah
+      - ls /build
+      - ls /build/dist
+
+
   - name: publish
     image: plugins/github-release
     settings:
-      api_key: $GITHUB_API_KEY
+      api_key:
+        from_secret: GITHUB_API_KEY
       files: 
         - dist/*
       checksum:
