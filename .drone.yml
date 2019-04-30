@@ -1,8 +1,8 @@
 kind: pipeline
 name: default
 
-#workspace:
-#  base: /go
+workspace:
+  base: /build
 #  path: src/github.com/yourname/go-drone-hello-world
 
 steps:
@@ -11,18 +11,35 @@ steps:
     commands:
       - export DEBIAN_FRONTEND=noninteractive
       - cd scripts
-      - bash install-ffmpeg.sh
+      - bash NVENC-FFMPEG-OBSbuild.sh --dest /opt/ffmpeg-obs
+      - mkdir -p /build/dist/
+      - mv /root/dist/ffmpeg-obs-nvenc_* /build/dist/
 
+      
   - name: build-bionic
     image: ubuntu:bionic
     commands:
       - export DEBIAN_FRONTEND=noninteractive
       - cd scripts
-      - bash install-ffmpeg.sh
+      - bash NVENC-FFMPEG-OBSbuild.sh --dest /opt/ffmpeg-obs
+      - mkdir -p /build/dist/
+      - mv /root/dist/ffmpeg-obs-nvenc_* /build/dist/
+
 
   - name: build-disco
     image: ubuntu:disco
     commands:
       - export DEBIAN_FRONTEND=noninteractive
       - cd scripts
-      - bash install-ffmpeg.sh
+      - bash NVENC-FFMPEG-OBSbuild.sh --dest /opt/ffmpeg-obs
+      - mkdir -p /build/dist/
+      - mv /root/dist/ffmpeg-obs-nvenc_* /build/dist/
+
+
+  - name: publish
+    image: plugins/github-release
+    settings:
+      api_key: $GITHUB_API_KEY
+      files: dist/*
+    when:
+       event: tag
