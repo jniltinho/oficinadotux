@@ -14,8 +14,6 @@ steps:
     image: ubuntu:xenial
     commands:
       - pwd
-      - ls -sh /build/dist
-      - rm -f /build/dist/*
       - mkdir -p /build/dist
       - ls -sh /build/dist
 
@@ -27,6 +25,7 @@ steps:
       - cd scripts
       - bash NVENC-FFMPEG-OBSbuild.sh --dest /opt/ffmpeg-obs
       - mv /root/dist/ffmpeg-obs-nvenc_* /build/dist/
+      - ls -sh /build/dist
 
 
   - name: build-bionic
@@ -36,6 +35,7 @@ steps:
       - cd scripts
       - bash NVENC-FFMPEG-OBSbuild.sh --dest /opt/ffmpeg-obs
       - mv /root/dist/ffmpeg-obs-nvenc_* /build/dist/
+      - ls -sh /build/dist
 
 
   - name: build-disco
@@ -45,6 +45,7 @@ steps:
       - cd scripts
       - bash NVENC-FFMPEG-OBSbuild.sh --dest /opt/ffmpeg-obs
       - mv /root/dist/ffmpeg-obs-nvenc_* /build/dist/
+      - ls -sh /build/dist
 
 
   - name: check-folder
