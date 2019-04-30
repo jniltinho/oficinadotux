@@ -1,0 +1,28 @@
+kind: pipeline
+name: default
+
+#workspace:
+#  base: /go
+#  path: src/github.com/yourname/go-drone-hello-world
+
+steps:
+  - name: build
+    image: ubuntu:xenial
+    commands:
+      - export DEBIAN_FRONTEND=noninteractive
+      - cd scripts
+      - bash install-ffmpeg.sh
+
+  - name: build
+    image: ubuntu:bionic
+    commands:
+      - export DEBIAN_FRONTEND=noninteractive
+      - cd scripts
+      - bash install-ffmpeg.sh
+
+  - name: build
+    image: ubuntu:disco
+    commands:
+      - export DEBIAN_FRONTEND=noninteractive
+      - cd scripts
+      - bash install-ffmpeg.sh
