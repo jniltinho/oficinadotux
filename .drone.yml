@@ -22,9 +22,9 @@ steps:
       - mkdir -p /build/dist/
       - mv /root/dist/ffmpeg-obs-nvenc_* /build/dist/
     when:
-      event: master
+      branch: master
 
-      
+
   - name: build-bionic
     image: ubuntu:bionic
     commands:
@@ -34,7 +34,7 @@ steps:
       - mkdir -p /build/dist/
       - mv /root/dist/ffmpeg-obs-nvenc_* /build/dist/
     when:
-      event: master2
+      branch: master2
 
 
   - name: build-disco
@@ -46,7 +46,7 @@ steps:
       - mkdir -p /build/dist/
       - mv /root/dist/ffmpeg-obs-nvenc_* /build/dist/
     when:
-      event: master2
+      branch: master2
 
 
   - name: publish
